@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "id": 1,
+      "id": "1",
       "question": "You have set up an Auto Scaling group. The cool down period for the Auto Scaling group is 7 minutes. The first instance is launched after 3 minutes, while the second instance is launched after 4 minutes. How many minutes after first instance is launched will Auto Scaling accept another scaling actMt request?",
       "rep1": "11 minutes",
       "rep2": "7 minutes",
@@ -11,7 +11,7 @@
       "explain": "Nếu giải thích một Auto Scaling group thay đổi quy mô đang khởi chạy nhiều hơn 1 instance thì khoảng thời gian cool down cho mỗi instance sẽ bắt đầu sau khi instance đó được khởi chạy. Các group vẫn bị khóa cho đế khi instance cuối được cùng được chạy đã hoàn thành giai đoạn cool down. Trong trường hợp này, thời gian cool down cho instance đầu tiên sau 3 phút và kết ở phút thứ 10(3+7 cool down), trong khi đối với trường hợp thứ 2, nó bắt đầu ở phút thứ 4 và kết thúc ở phút thứ 11(4+7). Do đó, Auto Scaling group sẽ nhật được một yêu cầu khác chỉ sau 11 phút."
     },
     {
-      "id": 2,
+      "id": "2",
       "question": "In Amazon EC2 Container Service components, what is the name of a logical grouping of container instances on which you can place tasks?",
       "rep1": "A cluster",
       "rep2": "A container instance",
@@ -21,7 +21,7 @@
       "explain": "1 Cluster là 1 nhóm loic của các instance container mà bạn có thể đặt các task lên."
     },
     {
-      "id": 3,
+      "id": "3",
       "question": "In the context of AWS support, why must an EC2 instance be unreachable for 20 minutes rather than allowing customers to open tickets immediately?",
       "rep1": "Because most reachability issues are resolved by automated processes in less than 20 minutes",
       "rep2": "Because all EC2 instances are unreachable for 20 minutes every day when AWS does touting maintenance",
@@ -31,7 +31,7 @@
       "explain": "Một instance EC2 phải không thể truy cập trong 20 phút trước khi mở một yêu cầu hỗ trợ, vì hầu hết các vấn đề về khả năng kết nối được giải quyết tự động trong ít hơn 20 phút và không đòi hỏi bất kì hành động nào ở phía khách hàng. Nếu instance vẫn không thể truy cập sau khoảng thời gian này, thì bạn nên mở một yêu cầu hỗ "
     },
     {
-      "id": 4,
+      "id": "4",
       "question": "Amazon EBS providers the ability to create backups of any Amazon EC2 volume into what is knows as",
       "rep1": "snapshot",
       "rep2": "images",
@@ -41,7 +41,7 @@
       "explain": "Amazon cho phép bạn tạo sao lưu dữ liệu được lưu trữ trong các ổ đĩa EBS của bạn thông qua bản chụp(snapshot) có thể được sử dụng sau này để tạo ra một ổ đĩa EBS mới"
     },
     {
-      "id": 5,
+      "id": "5",
       "question": "To specify a resource in a policy statement, in Amazon EC2, can you use its Amazon Name(ARN)?",
       "rep1": "Yes, you can",
       "rep2": "No, you can't because EC2 is not related to ARN",
@@ -51,328 +51,47 @@
       "explain": "Một số hoạt động API của Amazon EC2 cho phép bạn bao gồm các tài nguyên cụ thể trong chính sách của bạn mà bạn có thể được tạo hoặc thay đổi bởi hoạt động. Để chỉ định một tài nguyên trong câu lệnh, bạn cần sử dụng Amazon Resource Name(ARN) của nó"
     },
     {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
+      "1": "2",
+      "2": "2",
+      "3": "2",
+      "4": "2",
+      "id": "1144",
+      "question": "33",
+      "explain": "",
+      "answer": []
     },
     {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
+      "1": "rw",
+      "2": "rwr",
+      "3": "fsf",
+      "4": "fs",
+      "id": "5f4f",
+      "question": "fsf",
+      "explain": "",
+      "answer": [
+        "3",
+        "2"
+      ]
     },
     {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
+      "1": "rw",
+      "2": "rwr",
+      "3": "rwr",
+      "4": "rwr",
+      "id": "0b38",
+      "question": "rwrw",
+      "explain": "",
+      "answer": []
     },
     {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
-    },
-    {
-      "question": "",
-      "rep1": "",
-      "rep2": "",
-      "rep3": "",
-      "rep4": "",
-      "answer": 1,
-      "explain": ""
+      "1": "rwr",
+      "2": "rwrw",
+      "3": "rwr",
+      "4": "4343",
+      "id": "fad2",
+      "question": "rwr",
+      "explain": "rwrwr",
+      "answer": []
     }
   ]
 }
