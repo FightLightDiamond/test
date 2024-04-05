@@ -1,8 +1,14 @@
 "use client";
 
-import {Button, Checkbox, Input, Textarea} from "@material-tailwind/react";
+import {Button, Card, Checkbox, Input, Textarea} from "@material-tailwind/react";
 import {ChangeEvent, useState} from "react";
 import axios from "axios";
+import Markdown from "react-markdown";
+import {CodeBlock} from "@/components/CodeBlock";
+import {Pre} from "@/components/Pre";
+import remarkGfm from "remark-gfm";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeExternalLinks from "rehype-external-links";
 
 export default function Test() {
     const initData = {
@@ -54,22 +60,56 @@ export default function Test() {
         })
     }
 
+    const options = {
+        code: CodeBlock,
+        // Add here
+        pre: Pre,
+    }
+
     return (
-        <form className="p-24" onSubmit={onSubmit}>
-            {JSON.stringify(formData)}
-            <Textarea value={formData.question} onChange={onQuestion} required label="Question"/>
+        <Card>
+            <form className="p-24" onSubmit={onSubmit}>
+                <Textarea value={formData.question} onChange={onQuestion} required label="Question"/>
+                <Markdown
+                    className='prose prose-invert min-w-full'
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[
+                        rehypeSanitize,
+                        [rehypeExternalLinks,
+                            { content: { type: 'text', value: '🔗' } }
+                        ],
+                    ]}
+                    components={options}
+                >
+                    {formData.question}
+                </Markdown>
+                {
+                    [1, 2, 3, 4].map((name) =>
+                        <div className={'flex flex-row'} key={name}>
+                            <Checkbox onChange={onAnswer} name="answer" value={name}/>
+                            <Input value={formData[name]} required onChange={onInput} label={name.toString()} name={name.toString()}/>
+                        </div>
+                    )
+                }
 
-            {
-                [1, 2, 3, 4].map((name) =>
-                    <div className={'flex flex-row'} key={name}>
-                        <Checkbox onChange={onAnswer} name="answer" value={name}/>
-                        <Input value={formData[name]} required onChange={onInput} label={name.toString()} name={name.toString()}/>
-                    </div>
-                )
-            }
+                <Textarea value={formData.explain} required onChange={onExplain} label="Explain"/>
+                <Markdown
+                    className='prose prose-invert min-w-full'
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[
+                        rehypeSanitize,
+                        [rehypeExternalLinks,
+                            { content: { type: 'text', value: '🔗' } }
+                        ],
+                    ]}
+                    components={options}
+                >
+                    {formData.explain}
+                </Markdown>
 
-            <Textarea value={formData.explain} required onChange={onExplain} label="Explain"/>
-            <Button type={"submit"}>Save</Button>
-        </form>
+                <Button type={"submit"}>Save</Button>
+            </form>
+        </Card>
+
     );
 }
