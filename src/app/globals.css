@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+
+.box {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+#one {
+  background: red;
+  top: 100px;
+  left: 150px;
+  z-index: 1;
+}
+#two {
+  background: yellow;
+  top: 80px;
+  left: 100px;
+  z-index: -1;
+}
+#three {
+  background: blue;
+  z-index: 2;
+}

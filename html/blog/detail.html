@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            padding: 1rem;
+        }
+        article {
+            flex: 3;
+            padding: 1rem;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        .post-header {
+            margin-bottom: 2rem;
+        }
+        .post-header h1 {
+            margin: 0;
+        }
+        .post-content p {
+            line-height: 1.6;
+        }
+        .comments {
+            margin-top: 2rem;
+        }
+        .comments h3 {
+            margin-bottom: 1rem;
+        }
+        .comments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comments li {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Blog</h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+<main>
+    <article>
+        <div class="post-header">
+            <h1>Blog Post Title</h1>
+            <p>by Author Name | July 29, 2024</p>
+        </div>
+        <div class="post-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel orci at quam ultrices auctor. Curabitur id hendrerit felis.</p>
+            <p>Integer ac libero eu tortor fermentum suscipit. Vestibulum nec velit at nisi volutpat laoreet a non odio.</p>
+            <p>Phasellus imperdiet erat at orci euismod, et consequat nunc pellentesque. Aliquam erat volutpat.</p>
+        </div>
+        <div class="comments">
+            <h3>Comments</h3>
+            <ul>
+                <li>
+                    <strong>Commenter 1:</strong> Great post! I really enjoyed reading it.
+                </li>
+                <li>
+                    <strong>Commenter 2:</strong> Very informative, thank you for sharing.
+                </li>
+            </ul>
+        </div>
+    </article>
+    <aside>
+        <h3>About Me</h3>
+        <p>Short bio about the author of the blog.</p>
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="#">Post 1</a></li>
+            <li><a href="#">Post 2</a></li>
+            <li><a href="#">Post 3</a></li>
+        </ul>
+    </aside>
+</main>
+<footer>
+    <p>&copy; 2024 My Blog</p>
+</footer>
+</body>
+</html>

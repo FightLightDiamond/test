@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            padding: 1rem;
+        }
+        article {
+            flex: 3;
+            padding: 1rem;
+        }
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Blog</h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+<main>
+    <article>
+        <section>
+            <h2>Blog Post Title 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel orci at quam ultrices auctor. Curabitur id hendrerit felis.</p>
+        </section>
+        <section>
+            <h2>Blog Post Title 2</h2>
+            <p>Integer ac libero eu tortor fermentum suscipit. Vestibulum nec velit at nisi volutpat laoreet a non odio.</p>
+        </section>
+    </article>
+    <aside>
+        <h3>About Me</h3>
+        <p>Short bio about the author of the blog.</p>
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="#">Post 1</a></li>
+            <li><a href="#">Post 2</a></li>
+            <li><a href="#">Post 3</a></li>
+        </ul>
+    </aside>
+</main>
+<footer>
+    <p>&copy; 2024 My Blog</p>
+</footer>
+</body>
+</html>

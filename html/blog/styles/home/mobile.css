@@ -1,0 +1,12 @@
+main {
+    flex-direction: column;
+}
+
+article {
+    flex: 1;
+}
+
+aside {
+    flex: 1;
+    order: -1;
+}
